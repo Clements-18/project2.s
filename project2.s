@@ -40,3 +40,7 @@ main:
  sw $t8, 0($sp) 
  jr $ra 
  
+ RemoveLeadingSp:
+ li $t8, 32 
+ lw $a0, 8($sp)
+ 
