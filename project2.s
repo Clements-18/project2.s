@@ -26,3 +26,17 @@ main:
  jal Sum
  j end
  
+ 
+ Input_loop:
+ addi $sp, $sp, -4
+ sw $ra, 0($sp) 
+ jal RemoveLeadingSp
+ jal removespaceafter
+ jal ckLength
+ lw $ra, 4($sp) 
+ lw $t8, 0($sp)
+ addi $sp, $sp, 8 
+ addi $sp, $sp, -4
+ sw $t8, 0($sp) 
+ jr $ra 
+ 
