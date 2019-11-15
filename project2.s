@@ -44,3 +44,9 @@ main:
  li $t8, 32 
  lw $a0, 8($sp)
  
+ 
+ RemoveFrontSpace: 
+ lb $t6, 0($a0) 
+ beq $t8, $t6, removefirstcharacter 
+ move $t6, $a0 
+ jr $ra
